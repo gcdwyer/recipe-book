@@ -24,4 +24,13 @@ export class ShoppingEditComponent implements OnInit {
     this.ingredientAdded.emit(newIngredient);
   }
 
+  onDeleteItem() {
+    console.log("delete pushed");
+  }
+
+  onClearItem() {
+    console.log("clear pushed");
+    // this.nameInput.reset();
+  }
+
 }
