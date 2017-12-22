@@ -29,10 +29,10 @@
       </div>
       <div class="row">
         <div class="col-xs-12">
-          <!-- Disables the submit button if form is not valid -->
-          <!-- If edit mode, display Update else Add -->
+          <!-- Disables the submit button if form is not valid. If edit mode, display Update else Add -->
           <button class="btn btn-success" type="submit" [disabled]="!f.valid">{{ editMode ? 'Update' : 'Add'}}</button>
-          <button class="btn btn-danger" type="button">Delete</button>
+          <!-- Delete only aviable when in edit mode -->
+          <button class="btn btn-danger" type="button" (click)="onDeleteItem" *ngIf="editMode">Delete</button>
           <button class="btn btn-primary" type="button" (click)="onClearItem()">Clear</button>
         </div>
       </div>
