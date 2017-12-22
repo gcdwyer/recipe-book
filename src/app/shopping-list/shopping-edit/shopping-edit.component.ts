@@ -65,8 +65,10 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   }
 
   onClearItem() {
-    console.log("clear pushed");
-    // this.nameInput.reset();
+    // resets the form
+    this.shoppingListForm.reset();
+    // reverts edit back to default state
+    this.editMode = false;
   }
 
 }
