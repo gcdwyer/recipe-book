@@ -23,10 +23,12 @@ export class RecipeEditComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
       (params: Params) => {
+        // changes id string into number
         this.id = +params['id'];
         // sets edit mode to boolean
         this.editMode = params['id'] != null;
         console.log("editMode: " + this.editMode);
+        // run initialize form
         this.initializeForm();
       }
     );
@@ -34,6 +36,18 @@ export class RecipeEditComponent implements OnInit {
 
   onSubmit() {
     console.log(this.recipeForm);
+  }
+
+  // Add Ingredients ========================================================
+  onAddIngredient() {
+    console.log("add ingredients clicked");
+    // push new ingredients into array
+    (<FormArray>this.recipeForm.get('ingredients')).push(
+      new FormGroup({
+        'name': new FormControl(),
+        'amount': new FormControl()
+      })
+    )
   }
 
   private initializeForm() {
@@ -76,5 +90,7 @@ export class RecipeEditComponent implements OnInit {
       'ingredients': recipeIngredients
     });
   }
+
+  
 
 }
