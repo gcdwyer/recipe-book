@@ -31,14 +31,22 @@ export class RecipeDetailComponent implements OnInit {
     );
   }
 
-  // method to add ingredients to shopping list
+  // add ingredients to shopping list
   onAddToShoppingList() {
     this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
   }
 
-  // method to edit a recipe
+  // edit a recipe
   onEditRecipe() {
+    // routes to edit
     this.router.navigate(['edit'], {relativeTo: this.route});
+  }
+
+  // delete recipe
+  onDeleteRecipe() {
+    this.recipeService.deleteRecipe(this.id);
+    // routes to recipes
+    this.router.navigate(['/recipes']);
   }
 
 }
