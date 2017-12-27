@@ -7,6 +7,7 @@ import { RecipeStartComponent } from "./recipes/recipe-start/recipe-start.compon
 import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.component";
 import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component";
 import { SignupComponent } from "./auth/signup/signup.component";
+import { SigninComponent } from "./auth/signin/signin.component";
 
 const appRoutes: Routes =[
   // pathMatch used to for blank path because all paths contain the blank
@@ -23,7 +24,8 @@ const appRoutes: Routes =[
   // path deisplays shopping list
   { path: 'shopping-list', component: ShoppingListComponent },
   // pth to signup
-  { path: 'signup', component: SignupComponent}
+  { path: 'signup', component: SignupComponent},
+  { path: 'signin', component: SigninComponent}
 ];
 
 @NgModule({
