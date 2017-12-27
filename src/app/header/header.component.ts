@@ -21,4 +21,8 @@ export class HeaderComponent {
         }
       );
   }
+
+  onGetData() {
+    this.dataStorageService.getRecipes();
+  }
 }
