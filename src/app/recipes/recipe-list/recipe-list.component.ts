@@ -21,6 +21,7 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   ) { }
 
   ngOnInit() {
+    // subscribes and looks for changes
     this.subscription = this.recipeService.recipesChanged
       .subscribe(
         (recipes: Recipe[]) => {
@@ -31,6 +32,7 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
+    // unsubscribes from subscription
     this.subscription.unsubscribe();
   }
   
