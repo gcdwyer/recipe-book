@@ -13,17 +13,17 @@ export class RecipeService {
   private recipes: Recipe[] = [
     // name, description, imagePath
     new Recipe(
-      'Recipe 1', 
-      'Description 1', 
-      'http://via.placeholder.com/350x150', 
+      'Samsung Smartthings Hub', 
+      'The Samsung SmartThings hub can connect to more than 200 devices — more than most other hubs', 
+      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV71KhnasDgRXPnKik851dYgvivK29DG0s3ae1rvcFRL67mJhYqg', 
       [
         new Ingredient('Ing1', 1),
         new Ingredient('Ing2', 5)
       ]),
     new Recipe(
-      'Recipe 2', 
-      'Description 2', 
-      'http://via.placeholder.com/350x150',
+      'Amazon Echo Plus', 
+      'Echo Plus is a simple way to start your smart homeand allows for simple and direct setup of compatible ZigBee devices', 
+      'https://images-na.ssl-images-amazon.com/images/I/41-v1fozy0L._SY400_.jpg',
     [
       new Ingredient('Ing3', 2),
       new Ingredient('Ing4', 6)
