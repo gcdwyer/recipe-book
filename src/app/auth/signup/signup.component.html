@@ -1,4 +1,5 @@
 <form (ngSubmit)="onSignup(f)" #f="ngForm">
+  <!-- EMAIL================================================================= -->
   <div class="form-group">
     <label for="email">E-Mail</label>
     <!-- email required with proper address -->
@@ -12,9 +13,11 @@
     email
     #email="ngModel">
     <span 
-      class="help-block" *ngIf="!email.valid && email.touched">Please enter a valid email
+      class="help-block" 
+      *ngIf="!email.valid && email.touched">Please enter a valid email
     </span>
   </div>
+  <!-- PASSWORD================================================================= -->
   <div class="form-group">
     <label for="password">Password</label>
     <!-- password required and between 8-15 chars -->
@@ -29,9 +32,28 @@
     minlength="8"
     maxlength="15">
     <span 
-      class="help-block" *ngIf="!password.valid && password.touched">Password must be between 8 - 15 characters
+      class="help-block" 
+      *ngIf="!password.valid && password.touched">Password must be between 8 - 15 characters
     </span>
   </div>
+  <!-- CONFIRM PASSWORD================================================================= -->
+  <!-- <div class="form-group">
+      <label for="confirmPassword">Confirm Password</label>
+      <input 
+      type="password" 
+      id="confirmPassword" 
+      name="confirmPassword" 
+      class="form-control" 
+      ngModel
+      required
+      #confirmPassword="ngModel">
+      <span 
+        class="help-block" *ngIf="!confirmPassword.valid && confirmPassword.touched">Passwords do not match
+      </span>
+    </div> -->
   <!-- button disabled when form in invalid -->
-  <button class="btn btn-primary" type="submit" [disabled]="!f.valid">Sign Up</button>
+  <button 
+    class="btn btn-primary" 
+    type="submit" 
+    [disabled]="!f.valid">Sign Up</button>
 </form>
