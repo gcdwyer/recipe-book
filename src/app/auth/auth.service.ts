@@ -13,9 +13,16 @@ export class AuthService {
   // firebase authentication for Sign Up
   signupUser(email: string, password: string) {
     firebase.auth().createUserWithEmailAndPassword(email, password)
+      .then(
+        response => {
+          // navigates to root after signup
+          this.router.navigate(['/']);
+        }
+      )
       .catch(
         error => console.log(error)
       )
+      
   }
 
   // firebase authentication for Sign In
@@ -23,7 +30,7 @@ export class AuthService {
     firebase.auth().signInWithEmailAndPassword(email, password)
       .then(
         response => {
-          // navigates to root
+          // navigates to root after signin
           this.router.navigate(['/']);
           firebase.auth().currentUser.getToken()
             .then(

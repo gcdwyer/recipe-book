@@ -8,6 +8,7 @@ import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.com
 import { RecipeEditComponent } from "./recipes/recipe-edit/recipe-edit.component";
 import { SignupComponent } from "./auth/signup/signup.component";
 import { SigninComponent } from "./auth/signin/signin.component";
+import { AuthGuard } from './auth/auth-guard.service';
 
 const appRoutes: Routes =[
   // pathMatch used to for blank path because all paths contain the blank
@@ -16,10 +17,10 @@ const appRoutes: Routes =[
   { path: 'recipes', component: RecipesComponent, children: [
     // childen path of recipes
     { path: '', component: RecipeStartComponent },
-    { path: 'new', component: RecipeEditComponent },
+    { path: 'new', component: RecipeEditComponent, canActivate: [AuthGuard] },
     // dynamic paramaters must be ordered last
     { path: ':id', component: RecipeDetailComponent },
-    { path: ':id/edit', component: RecipeEditComponent },
+    { path: ':id/edit', component: RecipeEditComponent, canActivate: [AuthGuard] },
   ] },
   // path deisplays shopping list
   { path: 'shopping-list', component: ShoppingListComponent },

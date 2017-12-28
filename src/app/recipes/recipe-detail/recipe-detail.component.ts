@@ -34,12 +34,14 @@ export class RecipeDetailComponent implements OnInit {
   // add ingredients to shopping list
   onAddToShoppingList() {
     this.recipeService.addIngredientsToShoppingList(this.recipe.ingredients);
+    console.log("added to shopping cart");
   }
 
   // edit a recipe
   onEditRecipe() {
     // routes to edit
     this.router.navigate(['edit'], {relativeTo: this.route});
+    console.log("edit recipe");
   }
 
   // delete recipe
@@ -47,6 +49,7 @@ export class RecipeDetailComponent implements OnInit {
     this.recipeService.deleteRecipe(this.id);
     // routes to recipes
     this.router.navigate(['/recipes']);
+    console.log("delete recipe");
   }
 
 }
