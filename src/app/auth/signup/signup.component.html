@@ -21,19 +21,16 @@
   <div class="form-group">
     <label for="password">Password</label>
     <!-- password required and between 8-15 chars -->
-    <input 
-    type="password" 
-    id="password" 
-    name="password" 
-    class="form-control" 
-    ngModel
-    required
-    #password="ngModel"
-    minlength="8"
-    maxlength="15">
+    <input type="password" id="password" name="password" class="form-control" ngModel required #password="ngModel" minlength="8" maxlength="15">
     <span 
       class="help-block" 
       *ngIf="!password.valid && password.touched">Password must be between 8 - 15 characters
+    </span>
+    <label for="password">Confirm Password</label>
+    <input type="password" id="confirmPassword" name="confirmPassword" class="form-control" ngModel required #confirmPassword="ngModel">
+    <span 
+      class="help-block" 
+      *ngIf="confirmPassword === password">Needs to match
     </span>
   </div>
   <!-- CONFIRM PASSWORD================================================================= -->

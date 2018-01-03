@@ -27,7 +27,7 @@ export class RecipeEditComponent implements OnInit {
       (params: Params) => {
         // changes id string into number
         this.id = +params['id'];
-        // sets edit mode to boolean
+        // sets edit mode to true if id exists
         this.editMode = params['id'] != null;
         console.log("editMode: " + this.editMode);
         // run initialize form

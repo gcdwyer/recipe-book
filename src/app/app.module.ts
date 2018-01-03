@@ -1,7 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { ToastModule, ToastOptions} from 'ng2-toastr/ng2-toastr';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -43,10 +45,12 @@ import { HeaderBelowComponent } from './header-below/header-below.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     FormsModule,
     ReactiveFormsModule,
     HttpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ToastModule.forRoot()
   ],
   providers: [
     ShoppingListService, 
@@ -57,4 +61,5 @@ import { HeaderBelowComponent } from './header-below/header-below.component';
   ],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
