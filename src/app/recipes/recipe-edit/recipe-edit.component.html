@@ -3,15 +3,17 @@
     <form [formGroup]="recipeForm" (ngSubmit)="onSubmit()">
       <div class="row">
         <div class="col-xs-12">
+          <button 
+            type="button" 
+            class="btn btn-danger"
+            style="float: right; margin-left: 5px"
+            (click)="onCancel()">Cancel</button>
           <!-- Disables button when form is not valid -->
           <button 
             type="submit" 
             class="btn btn-success"
+            style="float: right"
             [disabled]="!recipeForm.valid">Save</button>
-          <button 
-          type="button" 
-          class="btn btn-danger" 
-          (click)="onCancel()">Cancel</button>
         </div>
       </div>
       <div class="row">
@@ -38,14 +40,22 @@
       <div class="row">
         <div class="col-xs-12">
           <!-- dynamiclly display preview of url -->
-          <img [src]="imagePath.value" alt="" class="img-responsive" style="max-height: 200px">
+          <img [src]="imagePath.value" alt="" class="img-responsive" style="max-height: 150px; display: block; margin: auto">
         </div>
       </div>
       <div class="row">
         <div class="col-xs-12">
           <div class="form-group">
             <label for="description">Description</label>
-            <textarea type="text" id="description" class="form-control" formControlName="description" rows="6"></textarea>
+            <textarea type="text" id="description" class="form-control" formControlName="description" rows="4"></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-xs-12">
+          <div class="form-group">
+            <label for="compatibility">Compatibility</label>
+            <input type="text" id="compatibility" class="form-control" formControlName="compatibility">
           </div>
         </div>
       </div>

@@ -75,10 +75,16 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   }
 
   onClearItem() {
+    // checks if the form is untouched
+    if(this.shoppingListForm.untouched) {
+      this.toastr.error('Nothing to clear', 'Oops!');
+    }
     // resets the form
     this.shoppingListForm.reset();
     // reverts edit back to default state
     this.editMode = false;
+    
+    
   }
 
 }
