@@ -1,6 +1,7 @@
 import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { Subscription } from 'rxjs/Subscription';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 import { Ingredient } from '../../shared/ingredient.model';
 import { ShoppingListService } from '../shopping-list.service';
@@ -19,7 +20,9 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   editedItemIndex: number;
   editedItem: Ingredient;
 
-  constructor(private shoppingListService: ShoppingListService) { }
+  constructor(
+    private shoppingListService: ShoppingListService,
+    private toastr: ToastsManager) { }
 
   ngOnInit() {
     this.subscription = this.shoppingListService.startedEditing
@@ -50,6 +53,8 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
       // execute add method
       this.shoppingListService.addIngredient(newIngredient);
     }
+    // pop up message on success
+    this.toastr.success('Ingredient Added.', 'Success!');
     // reverts edit back to default state
     this.editMode = false;
     // resets form
@@ -63,6 +68,8 @@ export class ShoppingEditComponent implements OnInit, OnDestroy {
   onDeleteItem() {
     // passes in the index of the edited item to delete
     this.shoppingListService.deleteIngredient(this.editedItemIndex);
+    // pop up message on success
+    this.toastr.success('Ingredient Deleted.', 'Success!');
     // clears the item
     this.onClearItem();
   }

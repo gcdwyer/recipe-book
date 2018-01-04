@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
-import { ToastsManager, ToastOptions } from 'ng2-toastr/ng2-toastr';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';

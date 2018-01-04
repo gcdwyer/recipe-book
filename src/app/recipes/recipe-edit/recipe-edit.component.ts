@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Params, Router } from '@angular/router';
 import { FormGroup, FormControl, FormArray, Validators } from '@angular/forms';
+import { ToastsManager } from 'ng2-toastr/ng2-toastr';
 
 import { RecipeService } from './../recipe.service';
 import { Recipe } from '../recipe.model';
@@ -18,9 +19,8 @@ export class RecipeEditComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private recipeService: RecipeService,
-    private router: Router) { 
-
-    }
+    private router: Router,
+    private toastr: ToastsManager) {}
 
   ngOnInit() {
     this.route.params.subscribe(
@@ -43,10 +43,12 @@ export class RecipeEditComponent implements OnInit {
     } else {
       this.recipeService.addRecipe(this.recipeForm.value);
     }
+    // pop up message on success
+    this.toastr.success('Recipe Saved.', 'Success!');
     this.onCancel();
   }
 
-  // Add Ingredients ========================================================
+  // Add Ingredients
   onAddIngredient() {
     console.log("add ingredients clicked");
     // push new ingredients into array
@@ -64,6 +66,8 @@ export class RecipeEditComponent implements OnInit {
 
   onDeleteIngredient(index: number) {
     (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
+    // pop up message on success
+    this.toastr.success('Ingredient Removed.', 'Success!');
   }
 
   // method to change route up a level
@@ -116,6 +120,4 @@ export class RecipeEditComponent implements OnInit {
     });
   }
 
-  
-
-}
+  }
