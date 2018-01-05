@@ -13,25 +13,26 @@ export class RecipeService {
   private recipes: Recipe[] = [
     // name, description, imagePath
     new Recipe(
-      'Samsung Smartthings Hub', 
-      'The Samsung SmartThings hub can connect to more than 200 devices — more than most other hubs',
-      'TBD',
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQV71KhnasDgRXPnKik851dYgvivK29DG0s3ae1rvcFRL67mJhYqg', 
+      'Creamy Chicken Pasta', 
+      'Bring on the cheesy heartiness you adore with an Italian Chicken-Pasta Skillet! This better-for-you Italian Chicken-Pasta Skillet is full of flavor.',
+      '8',
+      'http://del.h-cdn.co/assets/16/26/980x551/gallery-1467150710-lemon-butter-chicken-pasta-04.jpg', 
       [
-        new Ingredient('Hub', 1),
-        new Ingredient('Power Chord', 1),
-        new Ingredient('Power Adapter', 1),
-        new Ingredient('Ethernet Cable', 1)
+        new Ingredient('Pasta', 1),
+        new Ingredient('Chicken Breast', 3),
+        new Ingredient('Creamer', 1),
+        new Ingredient('Onion', 1)
       ]),
     new Recipe(
-      'Amazon Echo Plus', 
-      'Echo Plus is a simple way to start your smart homeand allows for simple and direct setup of compatible ZigBee devices',
-      'TBD',
-      'https://images-na.ssl-images-amazon.com/images/I/41-v1fozy0L._SY400_.jpg',
+      'Gyros with Tzatziki Sauce', 
+      'A homemade gyros recipe that is so mouth-wateringly good, you will make it again and again.',
+      '7.7',
+      'http://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/7/3/FNM_070111-WN-Dinners-014_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539853695.jpeg',
     [
-      new Ingredient('Hub', 1),
-      new Ingredient('Power Chord', 1),
-      new Ingredient('Power Adapter', 1)
+      new Ingredient('Ground Lamb', 1),
+      new Ingredient('Rosemary', 1),
+      new Ingredient('Tzatziki Sauce', 1),
+      new Ingredient('Garlic Clove', 3)
     ])
   ];
 

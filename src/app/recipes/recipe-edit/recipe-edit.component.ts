@@ -79,7 +79,7 @@ export class RecipeEditComponent implements OnInit {
     let recipeName = '';
     let recipeImagePath = '';
     let recipeDescription = '';
-    let recipeCompatibility = '';
+    let recipeRating = '';
     let recipeIngredients = new FormArray([]);
 
     // if in edit mode
@@ -90,7 +90,7 @@ export class RecipeEditComponent implements OnInit {
       recipeName = recipe.name;
       recipeImagePath = recipe.imagePath;
       recipeDescription = recipe.description;
-      recipeCompatibility = recipe.compatibility;
+      recipeRating = recipe.rating;
 
       // if recipe contains ingredients
       if (recipe['ingredients']) {
@@ -118,7 +118,7 @@ export class RecipeEditComponent implements OnInit {
       'name': new FormControl(recipeName, Validators.required),
       'imagePath': new FormControl(recipeImagePath, Validators.required),
       'description': new FormControl(recipeDescription, Validators.required),
-      'compatibility': new FormControl(recipeCompatibility, Validators.required),
+      'rating': new FormControl(recipeRating, Validators.required),
       'ingredients': recipeIngredients
     });
   }
