@@ -2,3 +2,12 @@ img {
     /* float: right; */
     max-height: 100px;
 }
+
+.list-group-item-text {
+  display: block;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
