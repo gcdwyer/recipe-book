@@ -55,4 +55,31 @@ export class DataStorageService {
         }
       );
   }
+
+  // getIngredients() {
+  //   const token = this.authService.getToken();
+
+  //   // get from DB
+  //   this.http.get('https://recipe-book-45271.firebaseio.com/shoppinglist.json?auth=' + token)
+  //     .map(
+  //       (response: Response) => {
+  //         const ingredients: any = response.json();
+  //         // loop through recipes
+  //         // for (let ingredient of ingredients) {
+  //           // if ingredients do not exist
+  //           // if (!recipe['ingredients']) {
+  //           //   console.log(recipe);
+  //           //   // create place holder for them
+  //           //   recipe['ingredients'] = [];
+  //           // }
+  //         // }
+  //         return ingredients;
+  //       }
+  //     )
+  //     .subscribe(
+  //       (ingredients: any) => {
+  //         // this.recipeService.setRecipes(recipes);
+  //       }
+  //     );
+  // }
 }

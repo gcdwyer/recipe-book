@@ -38,6 +38,11 @@ export class HeaderComponent {
     this.dataStorageService.getRecipes();
   }
 
+
+  onGetShoppingList() {
+    this.dataStorageService.getIngredients();
+  }
+
   onLogout() {
     this.authService.logout();
   }
