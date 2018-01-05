@@ -25,6 +25,15 @@ export class HeaderComponent {
       );
   }
 
+  onSaveShoppingList() {
+    this.dataStorageService.storeIngredients()
+      .subscribe(
+        (response: Response) => {
+          console.log(response);
+        }
+      );
+  }
+
   onGetData() {
     this.dataStorageService.getRecipes();
   }

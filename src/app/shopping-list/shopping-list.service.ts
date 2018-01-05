@@ -1,13 +1,18 @@
-import { Ingredient } from '../shared/ingredient.model';
-
+// import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
 
+import { Ingredient } from '../shared/ingredient.model';
+
+
+// @Injectable()
 export class ShoppingListService {
   ingredientsChanged = new Subject<Ingredient[]>();
   startedEditing = new Subject<number>();
+
   private ingredients: Ingredient[] = [
-    new Ingredient('Placeholder1', 1),
-    new Ingredient('Placeholder2', 2)
+    // name, amount
+    new Ingredient('Vanilla - 1 tsp', 1),
+    new Ingredient('Lemon Juice - 1 oz', 2)
   ];
 
   getIngredients() {

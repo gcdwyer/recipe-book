@@ -25,9 +25,11 @@
           <li class="dropdown" appDropdown>
             <a style="cursor: pointer;" class="dropdown-toggle" role="button">Manage<span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <!-- update to db -->
-              <li><a style="cursor: pointer;" (click)="onSaveData()">Save Data</a></li>
-              <!-- get from db -->
+              <!-- update recipes to db -->
+              <li><a style="cursor: pointer;" (click)="onSaveData()">Save Recipes</a></li>
+              <!-- update shopping list to db -->
+              <li><a style="cursor: pointer;" (click)="onSaveShoppingList()">Save Shopping List</a></li>
+              <!-- get recipes from db -->
               <li><a style="cursor: pointer;" (click)="onGetData()">Get Data</a></li>
             </ul>
           </li>

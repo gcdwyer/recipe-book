@@ -5,19 +5,28 @@ import 'rxjs/Rx';
 import { RecipeService } from "../recipes/recipe.service";
 import { Recipe } from "../recipes/recipe.model";
 import { AuthService } from "../auth/auth.service";
+import { ShoppingListService } from "../shopping-list/shopping-list.service";
 
 @Injectable()
 export class DataStorageService {
   constructor(
     private http: Http, 
     private recipeService: RecipeService,
+    private shoppingListService: ShoppingListService,
     private authService: AuthService) {}
 
   storeRecipes() {
     const token = this.authService.getToken();
 
-    // update to DB
+    // update recipes to DB
     return this.http.put('https://recipe-book-45271.firebaseio.com/recipes.json?auth=' + token, this.recipeService.getRecipes());
+  }
+
+  storeIngredients() {
+    const token = this.authService.getToken();
+    
+    // update shopping list to DB
+    return this.http.put('https://recipe-book-45271.firebaseio.com/shoppinglist.json?auth=' + token, this.shoppingListService.getIngredients());
   }
 
   getRecipes() {
