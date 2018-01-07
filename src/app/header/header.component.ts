@@ -40,7 +40,7 @@ export class HeaderComponent {
 
 
   onGetShoppingList() {
-    this.dataStorageService.getIngredients();
+    // this.dataStorageService.getIngredients();
   }
 
   onLogout() {

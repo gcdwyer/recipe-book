@@ -3,6 +3,7 @@ img {
     max-height: 100px;
 }
 
+/* adds ... to text overflow */
 .list-group-item-text {
   display: block;
   display: -webkit-box;

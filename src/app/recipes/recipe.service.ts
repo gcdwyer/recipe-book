@@ -33,7 +33,41 @@ export class RecipeService {
       new Ingredient('Rosemary - 1 bunch', 1),
       new Ingredient('Tzatziki Sauce - 6 oz', 1),
       new Ingredient('Garlic Clove', 3)
-    ])
+    ]),
+    new Recipe(
+      'Wrolds Best Lasagna', 
+      'It takes a little work, but it is worth it.',
+      '8.3',
+      'http://images.media-allrecipes.com/userphotos/720x405/3359675.jpg',
+    [
+      new Ingredient('Ground Italian Sausage - 0.5 lbs', 2),
+      new Ingredient('Ground Beef - 0.5 lbs', 2),
+      new Ingredient('Onion - small', 0.5),
+      new Ingredient('Canned Tomatoes - 28 oz', 1),
+      new Ingredient('Lasagna Noodes', 12)
+    ]),
+    new Recipe(
+      'Chef Johns Perfect Prime Rib', 
+      'This is a specific formula for achieving a perfectly pink prime rib cooked somewhere a shade under medium rare.',
+      '8.7',
+      'http://images.media-allrecipes.com/userphotos/720x405/1876731.jpg',
+    [
+      new Ingredient('Prime Rib Roast - 1 lbs', 4),
+      new Ingredient('Butter - 0.25 cup', 1),
+      new Ingredient('Ground Black Pepper - 1 tlbs', 1)
+    ]),
+    new Recipe(
+      'Chicken Parmesan', 
+      'My version of chicken parmesan is a little different than what they do in the restaurants, with less sauce and a crispier crust.',
+      '8.4',
+      'http://images.media-allrecipes.com/userphotos/720x405/1036363.jpg',
+    [
+      new Ingredient('Chicken Breast', 4),
+      new Ingredient('Eggs', 2),
+      new Ingredient('Bread Crumbs - 0.25 cup', 4),
+      new Ingredient('Mozzarella - 6 oz', 1),
+      new Ingredient('Basil - 0.25 cup', 1)
+    ]),
   ];
 
   constructor(private shoppingListService: ShoppingListService) {}
