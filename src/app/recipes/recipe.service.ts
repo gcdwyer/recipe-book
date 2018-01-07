@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs/Subject';
+import { Http, Headers, RequestOptions } from '@angular/http';
 
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient.model';
@@ -9,6 +10,7 @@ import { ShoppingListService } from '../shopping-list/shopping-list.service';
 @Injectable()
 export class RecipeService {
   recipesChanged = new Subject<Recipe[]>();
+  result: any;
 
   private recipes: Recipe[] = [
     // name, description, rating, imagePath
@@ -104,7 +106,9 @@ export class RecipeService {
     ])
   ];
 
-  constructor(private shoppingListService: ShoppingListService) {}
+  constructor(
+    private shoppingListService: ShoppingListService,
+    private _http: Http) {}
 
   getRecipes() {
     return this.recipes.slice();

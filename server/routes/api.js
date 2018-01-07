@@ -5,7 +5,11 @@ const ObjectID = require('mongodb').ObjectID;
 
 // Connect
 const connection = (closure) => {
+<<<<<<< HEAD
     return MongoClient.connect('mongodb://localhost:27017/recipes', (err, db) => {
+=======
+    return MongoClient.connect('mongodb://localhost:27017/recipebook', (err, db) => {
+>>>>>>> d7486ff7be9d3e1aa04cba26cf198cbb6489396f
         if (err) return console.log(err);
 
         closure(db);
@@ -27,6 +31,7 @@ let response = {
 };
 
 // Get users
+<<<<<<< HEAD
 router.get('/users', (req, res) => {
     connection((db) => {
         db.collection('users')
@@ -34,6 +39,15 @@ router.get('/users', (req, res) => {
             .toArray()
             .then((users) => {
                 response.data = users;
+=======
+router.get('/recipes', (req, res) => {
+    connection((db) => {
+        db.collection('recipes')
+            .find()
+            .toArray()
+            .then((recipes) => {
+                response.data = recipes;
+>>>>>>> d7486ff7be9d3e1aa04cba26cf198cbb6489396f
                 res.json(response);
             })
             .catch((err) => {
