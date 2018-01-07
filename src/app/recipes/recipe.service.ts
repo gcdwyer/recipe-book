@@ -19,9 +19,9 @@ export class RecipeService {
       '8',
       'http://del.h-cdn.co/assets/16/26/980x551/gallery-1467150710-lemon-butter-chicken-pasta-04.jpg', 
       [
-        new Ingredient('Pasta - 20 oz', 1),
+        new Ingredient('Pasta - oz', 20),
         new Ingredient('Chicken Breast', 3),
-        new Ingredient('Creamer - 8 oz', 1),
+        new Ingredient('Creamer - oz', 8),
         new Ingredient('Onion - small', 1)
       ]),
     new Recipe(
@@ -31,9 +31,9 @@ export class RecipeService {
       '7.7',
       'http://food.fnr.sndimg.com/content/dam/images/food/fullset/2011/6/7/3/FNM_070111-WN-Dinners-014_s4x3.jpg.rend.hgtvcom.616.462.suffix/1382539853695.jpeg',
     [
-      new Ingredient('Ground Lamb - 2 lbs', 1),
-      new Ingredient('Rosemary - 1 bunch', 1),
-      new Ingredient('Tzatziki Sauce - 6 oz', 1),
+      new Ingredient('Ground Lamb - lbs', 2),
+      new Ingredient('Rosemary - bunch', 1),
+      new Ingredient('Tzatziki Sauce - oz', 6),
       new Ingredient('Garlic Clove', 3)
     ]),
     new Recipe(
@@ -43,10 +43,10 @@ export class RecipeService {
       '8.3',
       'http://images.media-allrecipes.com/userphotos/720x405/3359675.jpg',
     [
-      new Ingredient('Ground Italian Sausage - 0.5 lbs', 2),
-      new Ingredient('Ground Beef - 0.5 lbs', 2),
-      new Ingredient('Onion - small', 0.5),
-      new Ingredient('Canned Tomatoes - 28 oz', 1),
+      new Ingredient('Ground Italian Sausage - lbs', 1),
+      new Ingredient('Ground Beef - lbs', 0.5),
+      new Ingredient('Onion - cup', 0.5),
+      new Ingredient('Canned Tomatoes - oz', 28),
       new Ingredient('Lasagna Noodes', 12)
     ]),
     new Recipe(
@@ -56,9 +56,9 @@ export class RecipeService {
       '8.7',
       'http://images.media-allrecipes.com/userphotos/720x405/1876731.jpg',
     [
-      new Ingredient('Prime Rib Roast - 1 lbs', 4),
-      new Ingredient('Butter - 0.25 cup', 1),
-      new Ingredient('Ground Black Pepper - 1 tlbs', 1)
+      new Ingredient('Prime Rib Roast - lbs', 4),
+      new Ingredient('Butter - cup', 0.25),
+      new Ingredient('Ground Black Pepper - tlbs', 1)
     ]),
     new Recipe(
       'top',
@@ -69,9 +69,9 @@ export class RecipeService {
     [
       new Ingredient('Chicken Breast', 4),
       new Ingredient('Eggs', 2),
-      new Ingredient('Bread Crumbs - 0.25 cup', 4),
-      new Ingredient('Mozzarella - 6 oz', 1),
-      new Ingredient('Basil - 0.25 cup', 1)
+      new Ingredient('Bread Crumbs - cup', 0.25),
+      new Ingredient('Mozzarella - oz', 6),
+      new Ingredient('Basil - cup', 0.25)
     ]),
     new Recipe(
       'mexican',
@@ -81,11 +81,11 @@ export class RecipeService {
       'http://images.media-allrecipes.com/userphotos/720x405/3706561.jpg',
     [
       new Ingredient('Chicken Breast', 3),
-      new Ingredient('Onion - Small', 1),
-      new Ingredient('Black Beans - 8 oz', 2),
-      new Ingredient('Chili Beans - 8 oz', 2),
-      new Ingredient('Tomato Sauce - 8 oz', 1),
-      new Ingredient('Cheddar Cheese - 8 oz', 1)
+      new Ingredient('Onion - cup', 1),
+      new Ingredient('Black Beans - oz', 8),
+      new Ingredient('Chili Beans - oz', 8),
+      new Ingredient('Tomato Sauce - oz', 8),
+      new Ingredient('Cheddar Cheese - oz', 4)
     ]),
     new Recipe(
       'mexican',
@@ -95,26 +95,13 @@ export class RecipeService {
       'http://images.media-allrecipes.com/userphotos/720x405/683438.jpg',
     [
       new Ingredient('Chicken Breast', 2),
-      new Ingredient('Onion - Small', 1),
-      new Ingredient('Sour Cream - 0.25 oz', 5),
-      new Ingredient('Chili Powder - 0.25 tsp', 1),
-      new Ingredient('Tomato Sauce - 8 oz', 1),
-      new Ingredient('Cheddar Cheese - 8 oz', 1),
-      new Ingredient('Tortillas - 12 in', 5)
-    ]),
-    new Recipe(
-      'mexican',
-      'Mexican Rice', 
-      'This is a wonderful side dish for any Mexican dinner.',
-      '8.8',
-      'http://images.media-allrecipes.com/userphotos/720x405/437348.jpg',
-    [
-      new Ingredient('Long-Grain Rice - cup', 1),
-      new Ingredient('Onion - cup', 0.25),
-      new Ingredient('Cumin - tsp', 0.5),
-      new Ingredient('Tomato Sauce - cup', 0.5),
-      new Ingredient('Chicken Broth cup', 2)
-    ]),
+      new Ingredient('Onion - cup', 1),
+      new Ingredient('Sour Cream - oz', 1),
+      new Ingredient('Chili Powder - tsp', 1),
+      new Ingredient('Tomato Sauce - oz', 8),
+      new Ingredient('Cheddar Cheese - oz', 8),
+      new Ingredient('Tortillas', 5)
+    ])
   ];
 
   constructor(private shoppingListService: ShoppingListService) {}

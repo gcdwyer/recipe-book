@@ -4,6 +4,8 @@ import { Subscription } from 'rxjs/Subscription';
 
 import { Recipe } from '../recipe.model';
 import { RecipeService } from '../recipe.service';
+import { AuthGuard } from '../../auth/auth-guard.service';
+import { AuthService } from '../../auth/auth.service';
 
 @Component({
   selector: 'app-recipe-list',
@@ -39,5 +41,11 @@ export class RecipeListComponent implements OnInit, OnDestroy {
   onNewRecipe() {
     // sets route to recipes/new
     this.router.navigate(['new'], {relativeTo: this.route});
+    console.log("new recipe if logged in");
+    // this.toastr.warning('User Not Logged In.', 'Warning!');
+    
+    
   }
+
+  
 }
