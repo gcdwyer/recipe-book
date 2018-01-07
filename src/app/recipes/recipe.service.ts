@@ -13,8 +13,9 @@ export class RecipeService {
   private recipes: Recipe[] = [
     // name, description, rating, imagePath
     new Recipe(
+      'top',
       'Creamy Chicken Pasta', 
-      'Bring on the cheesy heartiness you adore with an Italian Chicken-Pasta Skillet! This better-for-you Italian Chicken-Pasta Skillet is full of flavor.',
+      'This chicken alfredo recipe is really unique as it doesnt use a thickening agent, and is very versatile.',
       '8',
       'http://del.h-cdn.co/assets/16/26/980x551/gallery-1467150710-lemon-butter-chicken-pasta-04.jpg', 
       [
@@ -24,6 +25,7 @@ export class RecipeService {
         new Ingredient('Onion - small', 1)
       ]),
     new Recipe(
+      'top',
       'Gyro with Tzatziki Sauce', 
       'A homemade gyros recipe that is so mouth-wateringly good, you will make it again and again.',
       '7.7',
@@ -35,6 +37,7 @@ export class RecipeService {
       new Ingredient('Garlic Clove', 3)
     ]),
     new Recipe(
+      'top',
       'Wrolds Best Lasagna', 
       'It takes a little work, but it is worth it.',
       '8.3',
@@ -47,6 +50,7 @@ export class RecipeService {
       new Ingredient('Lasagna Noodes', 12)
     ]),
     new Recipe(
+      'top',
       'Chef Johns Perfect Prime Rib', 
       'This is a specific formula for achieving a perfectly pink prime rib cooked somewhere a shade under medium rare.',
       '8.7',
@@ -57,6 +61,7 @@ export class RecipeService {
       new Ingredient('Ground Black Pepper - 1 tlbs', 1)
     ]),
     new Recipe(
+      'top',
       'Chicken Parmesan', 
       'My version of chicken parmesan is a little different than what they do in the restaurants, with less sauce and a crispier crust.',
       '8.4',
@@ -67,6 +72,48 @@ export class RecipeService {
       new Ingredient('Bread Crumbs - 0.25 cup', 4),
       new Ingredient('Mozzarella - 6 oz', 1),
       new Ingredient('Basil - 0.25 cup', 1)
+    ]),
+    new Recipe(
+      'mexican',
+      'Slow Cooker Chicken Taco Soup', 
+      'You can call this soup or chili, but either way it is wonderful.',
+      '9.2',
+      'http://images.media-allrecipes.com/userphotos/720x405/3706561.jpg',
+    [
+      new Ingredient('Chicken Breast', 3),
+      new Ingredient('Onion - Small', 1),
+      new Ingredient('Black Beans - 8 oz', 2),
+      new Ingredient('Chili Beans - 8 oz', 2),
+      new Ingredient('Tomato Sauce - 8 oz', 1),
+      new Ingredient('Cheddar Cheese - 8 oz', 1)
+    ]),
+    new Recipe(
+      'mexican',
+      'Angelas Awesome Enchiladas', 
+      'The secret is in the seasonings! I whipped these up on my own using stuff I had on hand.',
+      '9.0',
+      'http://images.media-allrecipes.com/userphotos/720x405/683438.jpg',
+    [
+      new Ingredient('Chicken Breast', 2),
+      new Ingredient('Onion - Small', 1),
+      new Ingredient('Sour Cream - 0.25 oz', 5),
+      new Ingredient('Chili Powder - 0.25 tsp', 1),
+      new Ingredient('Tomato Sauce - 8 oz', 1),
+      new Ingredient('Cheddar Cheese - 8 oz', 1),
+      new Ingredient('Tortillas - 12 in', 5)
+    ]),
+    new Recipe(
+      'mexican',
+      'Mexican Rice', 
+      'This is a wonderful side dish for any Mexican dinner.',
+      '8.8',
+      'http://images.media-allrecipes.com/userphotos/720x405/437348.jpg',
+    [
+      new Ingredient('Long-Grain Rice - cup', 1),
+      new Ingredient('Onion - cup', 0.25),
+      new Ingredient('Cumin - tsp', 0.5),
+      new Ingredient('Tomato Sauce - cup', 0.5),
+      new Ingredient('Chicken Broth cup', 2)
     ]),
   ];
 
