@@ -12,7 +12,7 @@ import { AuthGuard } from './auth/auth-guard.service';
 
 const appRoutes: Routes =[
   // pathMatch used to for blank path because all paths contain the blank
-  // { path: '', redirectTo: '/recipes', pathMatch: 'full'},
+  { path: '', redirectTo: '/recipes', pathMatch: 'full'},
   // path displays recipes
   { path: 'recipes', component: RecipesComponent, children: [
     // childen path of recipes
