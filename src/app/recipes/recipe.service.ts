@@ -40,7 +40,7 @@ export class RecipeService {
     ]),
     new Recipe(
       'top',
-      'Wrolds Best Lasagna', 
+      'Worlds Best Lasagna', 
       'It takes a little work, but it is worth it.',
       '8.3',
       'http://images.media-allrecipes.com/userphotos/720x405/3359675.jpg',
@@ -49,7 +49,7 @@ export class RecipeService {
       new Ingredient('Ground Beef - lbs', 0.5),
       new Ingredient('Onion - cup', 0.5),
       new Ingredient('Canned Tomatoes - oz', 28),
-      new Ingredient('Lasagna Noodes', 12)
+      new Ingredient('Lasagna Noodles', 12)
     ]),
     new Recipe(
       'top',
